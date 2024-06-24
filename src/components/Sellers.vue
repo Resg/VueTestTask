@@ -6,7 +6,7 @@ import { Seller } from '@/types';
 
 const store = useStore();
 
-const sellers: Seller[] = computed(() => store.state.sellers.sellers);
+const sellers = computed<Seller[]>(() => store.state.sellers.sellers);
 const isLoading = computed(() => store.state.sellers.isLoading);
 const container = ref<HTMLDivElement | null>(null);
 
